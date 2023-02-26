@@ -1,46 +1,40 @@
-# Getting Started with Create React App
+# AlterEGO TestTask
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Стек технологій які я використав:
 
-## Available Scripts
+    * typescript
 
-In the project directory, you can run:
+    * reduxjs/toolkit, react-redux
+    * mui/material
+    * axios
+    * i18next, react-i18next
+    * react-hook-form
+    * react-router-dom
+    * styled-components
 
-### `npm start`
+## Реалізувати веб-застосунок, який вміє показувати наступні сторінки:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+    * / - головна, довільний контент.
+    * /news – сторінка з новинами. можна використовувати мокові дані з https://jsonplaceholder.typicode.com/ або аналогічних сервісів. Реалізувати кнопку “завантажити ще” при кліку на яку дозавантажуються пости, реалізувати видалення новини.
+    * /profile - сторінка з довільним текстом, недоступна без авторизації.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## На сайті, у шапці чи підвалі реалізувати посилання:
 
-### `npm test`
+    * На головну (/).
+    * Новини (/news).
+    * Профіль (/profile) або кнопка авторизуватися, якщо користувач не авторизований.
+    * Реалізувати багатомовність для меню сайту (українська - uk, англійська - en) за допомогою react-i18next.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Для вхожу форма приймає "фейкові" дані:
 
-### `npm run build`
+    * username: admin
+    * password: 12345
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+    * username: user
+    * password: 12345
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Якщо введено інші дані, відображається повідомлення:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+    * Ім'я користувача або пароль введено неправильно.
+    * Якщо введені коректні дані, перенаправляти на сторінку /profile.
+    * Якщо спробувати перейти на сторінку /profile без авторизації має бути редірект на головну сторінку.
