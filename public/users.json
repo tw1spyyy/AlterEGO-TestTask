@@ -1,0 +1,14 @@
+[
+    {
+        "login": "user",
+        "password": "12345"
+    },
+    {
+        "login": "admin",
+        "password": "12345"
+    },
+    {
+        "login": "tw1spy",
+        "password": "12345"
+    }
+]
